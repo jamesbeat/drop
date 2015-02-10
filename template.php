@@ -13,11 +13,46 @@ if (theme_get_setting('clear_registry')) {
   drupal_theme_rebuild();
 }
 
-// Add Zen Tabs styles
-if (theme_get_setting('drop_tabs')) {
-  drupal_add_css( drupal_get_path('theme', 'basic') .'/css/tabs.css');
-}
+// Add JS
+$js_base = drupal_get_path('theme', 'drop').'/js/';
 
+drupal_add_js($js_base.'jquery-migrate-1.2.1.min.js', array(
+  'type' => 'file',
+  'scope' => 'header',
+  'group' => JS_DEFAULT,
+  'weight' => 0,
+));
+
+drupal_add_js($js_base.'jquery.scrollTo.min.js', array(
+  'type' => 'file',
+  'scope' => 'footer',
+  'group' => JS_LIBRARY,
+  'weight' => 5,
+));
+
+drupal_add_js($js_base.'jquery.focuspoint.min.js', array(
+  'type' => 'file',
+  'scope' => 'footer',
+  'group' => JS_LIBRARY,
+  'weight' => 10,
+));
+
+drupal_add_js($js_base.'snap.min.js', array(
+  'type' => 'file',
+  'scope' => 'footer',
+  'group' => JS_LIBRARY,
+  'weight' => 15,
+));
+	
+drupal_add_js($js_base.'main.js', array(
+  'type' => 'file',
+  'scope' => 'footer',
+  'group' => JS_THEME,
+  'weight' => 20,
+));
+	
+	
+	
 function drop_preprocess_html(&$vars) {
   global $user, $language;
 
