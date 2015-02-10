@@ -1,6 +1,5 @@
 ## Customize the *Drop* base theme
 
-
 ### Setup Grunt
 
 1. Download and install *node.js* from [http://nodejs.org/](nodejs.org).
@@ -18,11 +17,11 @@ PATH=/usr/local/bin:$PATH
 `sudo npm install -g grunt-cli`
 
 5. Intall bundler
-`gem install bundler`
+`sudo gem install bundler`
 
 6. cd into the project dir and run
 
-`bundle install`
+`sudo bundle install`
 
 7. cd into the *Grunt* dir and run
 
