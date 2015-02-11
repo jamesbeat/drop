@@ -8,7 +8,7 @@
 	overflow-x: hidden;
 	z-index: 10;
 	background-color: #fff;
-	@include box-shadow(rgba(0,0,0,0.75) 6px 6px 20px);	
+		
 }
 
 .snap-drawers{
@@ -20,7 +20,7 @@
 	right: 0px;
 	left: 0px;
 	bottom: 0px;
-	@include box-shadow(rgba(0,0,0,0.75) 0px 4px 10px inset);
+	
 }
 
 .snap-drawer-right{
