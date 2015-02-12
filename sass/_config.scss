@@ -42,8 +42,8 @@ $max-width: em($max-width-px, 16);
 
 // Define your breakpoints.
 $max-width-fluid: new-breakpoint(max-width $max-width-px + px $grid-columns);
-$tablet: new-breakpoint(max-width 768px 8);
-$mobile: new-breakpoint(max-width 480px 4);
+$tablet: new-breakpoint(max-width 768px);
+$mobile: new-breakpoint(max-width 480px);
 
 // Import grid to be used (Bourbon Neat).
 // We load this after we provide our overrides: https://github.com/thoughtbot/neat#changing-the-defaults

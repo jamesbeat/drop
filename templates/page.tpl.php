@@ -53,13 +53,14 @@
 	          <?php if ($site_slogan): ?>
 	            <div id="site-slogan"><?php print $site_slogan; ?></div>
 	          <?php endif; ?>
-	          
-	          <nav role="navigation" class="main_nav">
-	          	<?php print theme('links', array('links' => $main_menu, 'attributes' => array('id' => 'primary', 'class' => array('links', 'clearfix', 'main-menu')))); ?>
-           	  </nav>
+	                 
 	
 	        </div>
 	      <?php endif; ?>
+	
+		   <nav role="navigation" id="main_nav">
+	          	<?php print theme('links', array('links' => $main_menu, 'attributes' => array('id' => 'primary', 'class' => array('links', 'clearfix', 'main-menu')))); ?>
+           </nav>
 	
 	      <?php if ($page['header']): ?>
 	        <div id="header-region">

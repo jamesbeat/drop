@@ -2,11 +2,11 @@
 
 @font-face {
 	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot?krqdpc');
-	src:url('fonts/icomoon.eot?#iefixkrqdpc') format('embedded-opentype'),
-		url('fonts/icomoon.woff?krqdpc') format('woff'),
-		url('fonts/icomoon.ttf?krqdpc') format('truetype'),
-		url('fonts/icomoon.svg?krqdpc#icomoon') format('svg');
+	src:url('../fonts/icomoon/icomoon.eot?krqdpc');
+	src:url('../fonts/icomoon/icomoon.eot?#iefixkrqdpc') format('embedded-opentype'),
+		url('../fonts/icomoon/icomoon.woff?krqdpc') format('woff'),
+		url('../fonts/icomoon/icomoon.ttf?krqdpc') format('truetype'),
+		url('../fonts/icomoon/icomoon.svg?krqdpc#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -32,13 +32,39 @@
 ul.icon_demo{
 	
 	li{
-	
+		text-align: center;
 		@include span-columns(1);
 		@include omega(12n);
+		
+		@include media($tablet) {
+			
+		  @include span-columns(2);
+		  @include omega(6n);
+		}
+		
+		@include media($mobile) {
+		  @include span-columns(3);
+		  @include omega(4n);
+		}
+		
+		padding-top:20px;
+		
+		span{
+			display: block;
+			font-size: 32px;
+			min-height: 1.4em;
+			
+			color: $link_color;
+			
+		}
 				
+		.label{
+			font-size: 10px;
+			line-height: 1em;
+			
+		}		
 	}
 }
-
 
 .icon-3d-rotation:before, %icon-3d-rotation:before { content: "\21"; }
 

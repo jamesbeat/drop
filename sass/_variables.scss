@@ -14,9 +14,16 @@
 
 // Colour variables
 $grey: #cccccc;
-$light_grey: lighten($grey, 20%);
+$light_grey: lighten($grey, 15%);
 $dark_grey: darken($grey, 20%);
+
+$link_color: #285078;
+$link_hover_color: lighten($link_color, 20%);
+$link_active_color: lighten($link_color, 30%);
+
 
 // Margin/padding variables
 $margin: $gutter;
 $padding: $gutter;
+
+$horizontal_padding: 20px;

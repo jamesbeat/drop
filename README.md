@@ -16,18 +16,25 @@ PATH=/usr/local/bin:$PATH
 4. Intsall grunt
 `sudo npm install -g grunt-cli`
 
-5. Intall bundler
+5. Intsall grunt favicons
+`sudo npm install grunt-favicons --save-dev`
+
+6. Install imagemagick
+`composer global require rfd/imagemagick`
+ (If you run into errors here, male sure you have xcode installed on your mac).
+
+7. Intall bundler
 `sudo gem install bundler`
 
-6. cd into the project dir and run
+8. cd into the project dir and run
 
 `sudo bundle install`
 
-7. cd into the *Grunt* dir and run
+9. cd into the *Grunt* dir and run
 
 `grunt`
 
-8. Add this snippet to your template files just before the closing *<body>* tag
+10. Add this snippet to your template files just before the closing *<body>* tag
 
  ```
 <script type='text/javascript'>//<![CDATA[

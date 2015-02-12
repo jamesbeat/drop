@@ -87,6 +87,15 @@ module.exports = function(grunt) {
                 }
             }
         },
+        /*favicons: {
+		    options: {
+		      // Task-specific options go here. 
+		    },
+		    icons: {
+		      src: '../logo.png',
+		      dest: '../'
+		    },
+		},*/
     });
     // This is where we tell Grunt we plan to use this plug-in.
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -94,6 +103,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
+    //grunt.loadNpmTasks('grunt-favicons');
     // Now that we've loaded the package.json and the node_modules we set the base path
     // for the actual execution of the tasks
     grunt.file.setBase('../')
