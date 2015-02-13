@@ -14,7 +14,7 @@ if (theme_get_setting('clear_registry')) {
 }
 
 // Add JS
-$js_base = drupal_get_path('theme', 'drop').'/js/build/';
+$js_base = drupal_get_path('theme', 'drop').'/js/build';
 
 drupal_add_js(libraries_get_path('jquery.migrate').'/build/release.js', array(
   'type' => 'file',
@@ -23,12 +23,6 @@ drupal_add_js(libraries_get_path('jquery.migrate').'/build/release.js', array(
   'weight' => 0,
 ));
 
-drupal_add_js(libraries_get_path('jquery.scrollTo').'/jquery.scrollTo.min.js', array(
-  'type' => 'file',
-  'scope' => 'footer',
-  'group' => JS_LIBRARY,
-  'weight' => 5,
-));
 
 drupal_add_js(libraries_get_path('jquery.focuspoint').'/js/jquery.focuspoint.min.js', array(
   'type' => 'file',
@@ -37,14 +31,31 @@ drupal_add_js(libraries_get_path('jquery.focuspoint').'/js/jquery.focuspoint.min
   'weight' => 10,
 ));
 
-drupal_add_js(libraries_get_path('snapjs').'/snap.min.js', array(
+drupal_add_js($js_base.'/snap.js', array(
   'type' => 'file',
   'scope' => 'footer',
-  'group' => JS_LIBRARY,
+  'group' => JS_THEME,
   'weight' => 15,
 ));
+
+
+drupal_add_js($js_base.'/jquery.scrollTo.js', array(
+  'type' => 'file',
+  'scope' => 'footer',
+  'group' => JS_THEME,
+  'weight' => 5,
+));
+
+drupal_add_js($js_base.'/jquery.smoothState.js', array(
+  'type' => 'file',
+  'scope' => 'footer',
+  'group' => JS_THEME,
+  'weight' => 10,
+));
+
+
 	
-drupal_add_js($js_base.'main.js', array(
+drupal_add_js($js_base.'/scripts.js', array(
   'type' => 'file',
   'scope' => 'footer',
   'group' => JS_THEME,

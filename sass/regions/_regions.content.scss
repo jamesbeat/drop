@@ -1,3 +1,8 @@
+#main{
+	@include flex(1); //for sticky footer
+	 
+}
+
 #content{
 	
 	padding-top: $horizontal_padding;

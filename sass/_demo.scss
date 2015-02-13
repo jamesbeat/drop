@@ -3,12 +3,13 @@ section.demo {
   text-align: center;
   margin-bottom: 3em;
 
-  background-color: rgba(0,30,255,0.1);
+  background-color: rgba(0,255,240,0.2);
   border-radius: 4px;
 
+ 
   div.box{
 	  
-	  background-color: rgba(0,30,255,0.2);
+	  background-color: rgba(0,255,240,0.2);
 	  border-radius: 4px;
 	  margin-bottom: 5px;
   }
@@ -174,3 +175,38 @@ div.code {
   padding:0.5em;
   text-align: center;
 }
+
+
+
+section#text{ @include outer-container; }
+	#text__headings{ @include span-columns(3); } 
+	#text__paragraphs{ @include span-columns(6); } 
+	#text__blockquotes{ @include span-columns(6);} 
+	#text__lists{ @include span-columns(3); @include omega;} 
+	#text__hr{ @include span-columns(12);} 
+	#text__tables{ @include span-columns(12);} 
+	#text__syntax{ @include span-columns(6);} 
+	#text__inline{ @include span-columns(6);@include omega;} 
+
+
+section#embedded{ @include outer-container; }
+
+	#embedded__images{ @include span-columns(12);} 
+	.demo_image{  @include span-columns(4);}
+		
+	#embedded__audio{ @include span-columns(6);} 
+	#embedded__video{ @include span-columns(6);@include omega;} 
+	#embedded__canvas{ @include span-columns(6);} 
+	#embedded__progress{ @include span-columns(6);@include omega;} 
+	#embedded__svg{ @include span-columns(6);} 
+	#embedded__iframes{ @include span-columns(6);@include omega;} 
+
+
+section#forms{ @include outer-container; @include fill-parent(); }
+
+	#forms__text{ @include span-columns(6); } 
+	#forms__html5{ @include span-columns(6);@include omega;} 
+	#forms__select{ @include span-columns(6); } 
+	#forms__checkbox{ @include span-columns(6);@include omega;} 
+	#forms__radio{ @include span-columns(6);} 
+	#forms__action{ @include span-columns(6);@include omega;} 

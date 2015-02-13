@@ -87,7 +87,7 @@ module.exports = function(grunt) {
                 }
             }
         },
-        /*favicons: {
+       /* favicons: {
 		    options: {
 		      // Task-specific options go here. 
 		    },

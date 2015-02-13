@@ -12,18 +12,49 @@
 // SASS:				http://sass-lang.com/docs/yardoc/file.scss_REFERENCE.html#variables_
 // Bourbon:				http://bourbon.io/docs/
 
-// Colour variables
-$grey: #cccccc;
-$light_grey: lighten($grey, 15%);
-$dark_grey: darken($grey, 20%);
 
-$link_color: #285078;
-$link_hover_color: lighten($link_color, 20%);
-$link_active_color: lighten($link_color, 30%);
-
-
-// Margin/padding variables
-$margin: $gutter;
-$padding: $gutter;
+//FONTS
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700|Montserrat:400,700);
 
 $horizontal_padding: 20px;
+
+// Typography
+$base-font-family: "Lato", sans-serif;
+$text-font-family: "Lato", sans-serif;
+$heading-font-family: "Montserrat", sans-serif;
+
+// Font Sizes
+$base-font-size: 16px;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$demo_color: #00fff0;
+$grey: #cccccc;
+$light-grey: lighten($grey, 15%);
+$dark-grey: darken($grey, 20%);
+
+$link-color: #285078;
+$hover-color: lighten($link-color, 20%);
+$active-color: lighten($link-color, 30%);
+
+// Font Colors
+$base-background-color: #fff;
+$base-font-color: #000;
+
+
+// Border
+$base-border-color: $light-grey;
+$base-border: 1px solid $base-border-color;
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($link-color, $lightness: -5%, $alpha: -0.3);

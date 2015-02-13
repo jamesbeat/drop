@@ -1,0 +1,83 @@
+body {
+  @include font-feature-settings("kern", "liga", "pnum");
+  -webkit-font-smoothing: antialiased;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+  line-height: $heading-line-height;
+  margin: 0 0 $small-spacing;
+}
+
+h1{ font-size: 1.6rem;}
+h2{ font-size: 1.4rem;}
+h3{ font-size: 1.2rem;}
+h4{ font-size: 1.2rem;}
+h5{ font-size: 1.2rem;}
+h6{ font-size: 1rem;}
+
+p {
+  font-family: $text-font-family;	
+  margin: 0 0 $small-spacing;
+  font-size: 1rem;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: color 0.1s linear;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $hover-color;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: $base-spacing 0;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+
+.line-behind-text {
+	border-bottom: 1px solid #cacaca;
+	text-align: center;
+	margin-bottom: 4.5em;
+	
+	n1,h2,h3,h4,h5,h6 {
+		background: #fff;
+		color: $dark-grey;
+		display: inline-block;
+				
+		padding: 0 10px;
+		position: relative;
+		text-transform: uppercase;
+		top: 24px;
+	}
+}
+

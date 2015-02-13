@@ -1,5 +1,7 @@
 #header{
 	
+	
+	
 	padding-top: $horizontal_padding;
 	padding-bottom: $horizontal_padding;
 	
@@ -54,11 +56,13 @@
 	a{
 		font-size: 1rem;
 		text-transform: uppercase;
-		color: $link_color;
+		color: $link-color;
+		font-weight: normal;
+		font-family: $heading-font-family;
 		
 		&:hover{ 
 			text-decoration: none;
-			color: $link_hover_color;
+			color: $hover-color;
 		}
 	}
 }
@@ -83,20 +87,21 @@
 				text-transform: uppercase;
 				display: inline-block;
 				padding: 12px;
+				font-family: $heading-font-family;
 				font-weight: normal;
-				color: $link_color;
+				color: $link-color;
 				
 				&:hover{ 
-					color: $link_hover_color;
+					color: $hover-color;
 					text-decoration: none;
 				}
 			}
 						
 			&.active-trail{
-				a{ color: $link_active_color; }
+				a{ color: $active-color; }
 			}
 			&.active{
-				a{ color: $link_active_color; }
+				a{ color: $active-color; }
 			}
 			
 		}
@@ -125,15 +130,15 @@
 				
 	a#snap_btn{
 		
-		color: $link_color;
+		color: $link-color;
 		
 		&.active{
-			color: $link_active_color;
+			color: $active-color;
 		}
 		
 		&:hover{
 			text-decoration: none;
-			color: $link_hover_color;
+			color: $hover-color;
 		}	
 		
 		i{

@@ -17,12 +17,16 @@
 // Boubon Neat (grid):	https://github.com/thoughtbot/neat#using-the-grid
 
 // Import variables and mixins to be used (Bourbon)
+
+
 @import "components/bourbon/bourbon";
 @import "components/neat/neat-helpers";
 
 // Bourbon grid display. Comment out to remove display.
 $visual-grid: true;
-$visual-grid-color: #eeeeee;
+$visual-grid-color: #00fff0;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.05;
 
 // Set to false if you'd like to remove the responsiveness.
 $responsive: true;
@@ -31,6 +35,8 @@ $responsive: true;
 $column: 60px;
 $gutter: 20px;
 $grid-columns: 12;
+
+$page-padding: 20px;
 
 // We set the max width of the page using the px to em function in Bourbon.
 // the first value is the pixel value of the width and the second is the base font size of your theme.
@@ -42,13 +48,15 @@ $max-width: em($max-width-px, 16);
 
 // Define your breakpoints.
 $max-width-fluid: new-breakpoint(max-width $max-width-px + px $grid-columns);
-$tablet: new-breakpoint(max-width 768px);
-$mobile: new-breakpoint(max-width 480px);
+$tablet: new-breakpoint(max-width 768px 8);
+$mobile: new-breakpoint(max-width 480px 6);
 
 // Import grid to be used (Bourbon Neat).
 // We load this after we provide our overrides: https://github.com/thoughtbot/neat#changing-the-defaults
 @import "components/neat/neat";
+@import "components/base/base";
 
 // Import local files
-@import "_variables.scss";
+
 @import "_mixins.scss";
+@import "_variables.scss";

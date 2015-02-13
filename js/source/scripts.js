@@ -19,6 +19,106 @@ Drupal.behaviors.basic = {
 
     $(window).ready(function() {
       // Execute code once the window is ready.
+      //console.log("RDY");
+					
+		var snapper = new Snap({
+	        element: document.getElementById('snap_table'),
+	        disable: 'left',
+	        hyperextensible: false,
+	        maxPosition: 275,
+			minPosition: -275,
+			slideIntent: 20,
+			minDragDistance: 20,
+			touchToDrag: false,
+	
+	    });
+	    
+	    /*
+	    snapper.on('start', function(){
+		  // Do Something
+		  //console.log('sztart');
+		});
+	        	
+		snapper.on('animated', function(){
+		  // Do Something
+		  //console.log('animated');
+		});
+		
+		snapper.on('expandLeft', function(){
+		  // Do Something
+		  //console.log('expandLeft');
+		});
+		
+		snapper.on('expandRight', function(){
+		  // Do Something
+		  //console.log('expandRight');
+		});
+		*/
+		
+		snapper.on('open', function(){
+	
+		  $("#snap_btn").addClass('active');
+		});
+		
+		snapper.on('close', function(){
+	
+		  $("#snap_btn").removeClass('active');
+		});
+	  
+		$("#snap_btn").on('click', function(e){
+							
+			e.preventDefault();
+	
+		    if( snapper.state().state=="right" ){
+		        snapper.close();
+		    } else {
+		        snapper.open('right');
+		    }
+		
+		});
+	    
+	    
+	    //smoothstate
+	  	    	    
+	    var $body    = $('html, body'),
+	        content  = $('#snap_table').smoothState({
+	            prefetch: true,
+	            pageCacheSize: 4,
+	            blacklist: "#snap_btn, .tabs a",
+	            onStart: {
+	                duration: 250,
+	                render: function (url, $container) {
+	                    content.toggleAnimationClass('is-exiting');
+	                    $body.animate({
+	                        scrollTop: 0
+	                    });
+	                    
+	                    #main.css('opacity','0.5');
+	                    
+	                    console.log("Smoothstate Start"); 
+	                }
+	            },
+	            onProgress : {
+				    duration: 0, // Duration of the animations, if any.
+				    render: function (url, $container) {
+				        $body.css('cursor', 'wait');
+				        $body.find('a').css('cursor', 'wait');
+				        
+				        console.log("Smoothstate Progress");
+				    }
+				},
+				onEnd : {
+				    duration: 0, // Duration of the animations, if any.
+				    render: function (url, $container, $content) {
+				        $body.css('cursor', 'auto');
+				        $body.find('a').css('cursor', 'auto');
+				        $container.html($content);
+				        
+				        console.log("Smoothstate End");
+				    }
+				},
+	        }).data('smoothState');
+
     });
 
     $(window).load(function() {

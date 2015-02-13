@@ -1,6 +1,7 @@
 // Settings
 @import "settings/prefixer";
 @import "settings/px-to-em";
+@import "settings/asset-pipeline";
 
 // Custom Helpers
 @import "helpers/convert-units";
@@ -25,6 +26,7 @@
 @import "functions/grid-width";
 @import "functions/modular-scale";
 @import "functions/px-to-em";
+@import "functions/px-to-rem";
 @import "functions/strip-units";
 @import "functions/tint-shade";
 @import "functions/transition-property-name";
@@ -44,6 +46,7 @@
 @import "css3/filter";
 @import "css3/flex-box";
 @import "css3/font-face";
+@import "css3/font-feature-settings";
 @import "css3/hyphens";
 @import "css3/hidpi-media-query";
 @import "css3/image-rendering";
@@ -66,11 +69,11 @@
 @import "addons/html5-input-types";
 @import "addons/position";
 @import "addons/prefixer";
-@import "addons/rem";
 @import "addons/retina-image";
 @import "addons/size";
 @import "addons/timing-functions";
 @import "addons/triangle";
+@import "addons/word-wrap";
 
 // Soon to be deprecated Mixins
 @import "bourbon-deprecated-upcoming";
