@@ -81,40 +81,46 @@ Drupal.behaviors.basic = {
 	    //smoothstate
 	  	    	    
 	    var $body    = $('html, body'),
+	    	$main 	 = $('#main'),
 	        content  = $('#snap_table').smoothState({
 	            prefetch: true,
-	            pageCacheSize: 4,
+	            pageCacheSize: 6,
 	            blacklist: "#snap_btn, .tabs a",
 	            onStart: {
-	                duration: 250,
+	                duration: 0,
 	                render: function (url, $container) {
-	                    content.toggleAnimationClass('is-exiting');
+	                    //content.toggleAnimationClass('is-exiting');
+	                    $body.addClass('is-exiting');
 	                    $body.animate({
 	                        scrollTop: 0
 	                    });
+	                                        
 	                    
-	                    #main.css('opacity','0.5');
-	                    
-	                    console.log("Smoothstate Start"); 
+	                    //console.log("Smoothstate Start"); 
 	                }
 	            },
 	            onProgress : {
 				    duration: 0, // Duration of the animations, if any.
 				    render: function (url, $container) {
-				        $body.css('cursor', 'wait');
-				        $body.find('a').css('cursor', 'wait');
 				        
-				        console.log("Smoothstate Progress");
+				       // content.toggleAnimationClass('is-loading');
+				        //$body.css('cursor', 'wait');
+				        //$body.find('a').css('cursor', 'wait');
+				        
+				        //console.log("Smoothstate Progress");
 				    }
 				},
 				onEnd : {
 				    duration: 0, // Duration of the animations, if any.
 				    render: function (url, $container, $content) {
-				        $body.css('cursor', 'auto');
-				        $body.find('a').css('cursor', 'auto');
+				       // $body.css('cursor', 'auto');
+				        //$body.find('a').css('cursor', 'auto');
+				        $body.removeClass('is-exiting');
+				        //content.toggleAnimationClass('is-entering');
 				        $container.html($content);
-				        
-				        console.log("Smoothstate End");
+				       
+				       				        
+				        //console.log("Smoothstate End");
 				    }
 				},
 	        }).data('smoothState');
