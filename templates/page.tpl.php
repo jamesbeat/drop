@@ -69,7 +69,7 @@
 	      <?php endif; ?>
 	      
 		      <!-- Snap Button -->
-		    <div class="nav-snap"><a href="/" id="snap_btn"><i></i></a></div>
+		    <div class="nav-snap"><a href="" id="snap_btn"><i></i></a></div>
 	      
 	    </div>
 	  </header> <!-- /header -->
