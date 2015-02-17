@@ -76,16 +76,31 @@ Drupal.behaviors.basic = {
 		    }
 		
 		});
+		
+		
+		$("#snap_demo").on('click', function(e){
+							
+			e.preventDefault();
+	
+		    if( snapper.state().state=="right" ){
+		        snapper.close();
+		    } else {
+		        snapper.open('right');
+		    }
+		
+		});
 	    
+	    	    
 	    
 	    //smoothstate
 	  	    	    
 	    var $body    = $('html, body'),
 	    	$main 	 = $('#main'),
-	        content  = $('#snap_table').smoothState({
+	    	$spinner = $('#center_spinner'),
+	    	content  = $('#snap_table').smoothState({
 	            prefetch: true,
 	            pageCacheSize: 6,
-	            blacklist: "#snap_btn, .tabs a",
+	            blacklist: "#snap_btn, #snap_demo, .tabs a",
 	            onStart: {
 	                duration: 0,
 	                render: function (url, $container) {
@@ -103,6 +118,8 @@ Drupal.behaviors.basic = {
 				    duration: 0, // Duration of the animations, if any.
 				    render: function (url, $container) {
 				        
+				      Pace.restart();
+				        
 				       // content.toggleAnimationClass('is-loading');
 				        //$body.css('cursor', 'wait');
 				        //$body.find('a').css('cursor', 'wait');
@@ -116,6 +133,7 @@ Drupal.behaviors.basic = {
 				       // $body.css('cursor', 'auto');
 				        //$body.find('a').css('cursor', 'auto');
 				        $body.removeClass('is-exiting');
+				        
 				        //content.toggleAnimationClass('is-entering');
 				        $container.html($content);
 				       
@@ -129,6 +147,11 @@ Drupal.behaviors.basic = {
 
     $(window).load(function() {
       // Execute code once the window is fully loaded.
+      console.log('loaded');
+      $('pre code').each(function(i, block) {
+	    hljs.highlightBlock(block);
+	  });
+      
     });
 
     $(window).resize(function() {

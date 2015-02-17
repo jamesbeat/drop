@@ -1,32 +1,38 @@
 //Snap
 
 #snap_table{
-	
-	@include display(flex); 
-	@include flex-direction(column); 
-
-	
-	width: 100%;
-	min-height: 100vh;
+			
 	position: absolute;
-	overflow: auto;
-	overflow-x: hidden;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: auto;
+	height: auto;
 	z-index: 10;
-	background-color: #fff;
+	overflow: auto;
+	
+	background: #fff;
+	
+	-webkit-overflow-scrolling: touch;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
 		
 }
 
-snap_table
-
 .snap-drawers{
 	
-	position: absolute;
 	z-index: 5;
-	width: 100%;
-	top: 0px;
-	right: 0px;
-	left: 0px;
-	bottom: 0px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: auto;
+	height: auto;
 	
 }
 

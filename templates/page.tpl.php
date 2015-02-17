@@ -22,6 +22,8 @@
 
 <div id="snap_table" class="snap-content">
 
+	
+
 	<div id="page" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 	
 	  <!-- ______________________ HEADER _______________________ -->
@@ -143,6 +145,8 @@
 	      </div>
 	    </footer> <!-- /footer -->
 	  <?php endif; ?>
+	
+	  
 	
 	</div> <!-- /page -->
 </div> <!-- snap-content -->

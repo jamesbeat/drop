@@ -31,6 +31,8 @@ drupal_add_js(libraries_get_path('jquery.focuspoint').'/js/jquery.focuspoint.min
   'weight' => 10,
 ));
 
+
+
 drupal_add_js($js_base.'/snap.js', array(
   'type' => 'file',
   'scope' => 'footer',
@@ -43,23 +45,42 @@ drupal_add_js($js_base.'/jquery.scrollTo.js', array(
   'type' => 'file',
   'scope' => 'footer',
   'group' => JS_THEME,
-  'weight' => 5,
+  'weight' => 25,
 ));
 
 drupal_add_js($js_base.'/jquery.smoothState.js', array(
   'type' => 'file',
   'scope' => 'footer',
   'group' => JS_THEME,
-  'weight' => 10,
+  'weight' => 30,
 ));
 
+drupal_add_js($js_base.'/pace.init.js', array(
+  'type' => 'file',
+  'scope' => 'footer',
+  'group' => JS_THEME,
+  'weight' => 40,
+));
 
+drupal_add_js($js_base.'/pace.min.js', array(
+  'type' => 'file',
+  'scope' => 'footer',
+  'group' => JS_THEME,
+  'weight' => 50,
+));
+
+drupal_add_js($js_base.'/highlight.pack.js', array(
+  'type' => 'file',
+  'scope' => 'footer',
+  'group' => JS_THEME,
+  'weight' => 55,
+));
 	
 drupal_add_js($js_base.'/scripts.js', array(
   'type' => 'file',
   'scope' => 'footer',
   'group' => JS_THEME,
-  'weight' => 20,
+  'weight' => 60,
 ));
 	
 	

@@ -7,7 +7,6 @@
 // Import variables and mixins to be used.
 @import "_config.scss";
 @import "_sprites.scss";
-@import "_typography.scss";
 // Custom code here.
 
 // Import wildcard files and folders.
@@ -17,5 +16,4 @@
 @import "nodes/*";
 @import "regions/*";
 @import "forms/*";
-@import "_animations.scss";
 @import "_demo.scss";

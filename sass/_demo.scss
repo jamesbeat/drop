@@ -176,6 +176,41 @@ div.code {
   text-align: center;
 }
 
+.demo_feature{
+	@include span-columns(4);
+    @include omega(3n);
+    
+    @include media($tablet) {
+		
+	  @include span-columns(4);
+	  @include omega(2n);
+	}
+	
+	@include media($mobile) {
+	  @include span-columns(6);
+	  @include omega(1n);
+	}
+    
+    border: 1px solid $light-grey;
+    padding: 20px;
+    
+    text-align: center;
+    
+    margin-bottom: 20px;
+    
+    h3{
+	    text-align: center;
+    }
+    
+    h3 i{
+	    color: $link-color;
+	    font-size: 1.5em;
+    }
+    
+    p{
+	    text-align: left;
+    }
+}
 
 
 section#text{ @include outer-container; }
