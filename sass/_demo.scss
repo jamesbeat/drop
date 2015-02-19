@@ -213,6 +213,10 @@ div.code {
 }
 
 
+.demo_images{
+	img{ margin-bottom: $gutter;}
+}
+
 section#text{ @include outer-container; }
 	#text__headings{ @include span-columns(3); } 
 	#text__paragraphs{ @include span-columns(6); } 

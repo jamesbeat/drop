@@ -3878,7 +3878,8 @@ picture {
 .line-behind-text {
   border-bottom: 1px solid #cacaca;
   text-align: center;
-  margin-bottom: 4.5em;
+  margin-top: 1.5em;
+  margin-bottom: 2em;
   height: 1em;
 }
 .line-behind-text h1, .line-behind-text h2, .line-behind-text h3, .line-behind-text h4, .line-behind-text h5, .line-behind-text h6 {
@@ -4603,6 +4604,10 @@ div.code:after {
   text-align: left;
 }
 
+.demo_images img {
+  margin-bottom: 20px;
+}
+
 section#text {
   max-width: 68em;
   margin-left: auto;
@@ -4862,6 +4867,250 @@ section#forms:after {
   margin-right: 0;
 }
 #forms__action:last-child {
+  margin-right: 0;
+}
+
+.col_1 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 6.38298%;
+}
+.col_1:last-child {
+  margin-right: 0;
+}
+
+.col_2 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 14.89362%;
+}
+.col_2:last-child {
+  margin-right: 0;
+}
+
+.col_3 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 23.40426%;
+}
+.col_3:last-child {
+  margin-right: 0;
+}
+
+.col_4 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 31.91489%;
+}
+.col_4:last-child {
+  margin-right: 0;
+}
+
+.col_5 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 40.42553%;
+}
+.col_5:last-child {
+  margin-right: 0;
+}
+
+.col_6 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 48.93617%;
+}
+.col_6:last-child {
+  margin-right: 0;
+}
+
+.col_7 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 57.44681%;
+}
+.col_7:last-child {
+  margin-right: 0;
+}
+
+.col_8 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 65.95745%;
+}
+.col_8:last-child {
+  margin-right: 0;
+}
+
+.col_9 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 74.46809%;
+}
+.col_9:last-child {
+  margin-right: 0;
+}
+
+.col_10 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 82.97872%;
+}
+.col_10:last-child {
+  margin-right: 0;
+}
+
+.col_11 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 91.48936%;
+}
+.col_11:last-child {
+  margin-right: 0;
+}
+
+.col_12 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 100%;
+}
+.col_12:last-child {
+  margin-right: 0;
+}
+
+.col_13 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 108.51064%;
+}
+.col_13:last-child {
+  margin-right: 0;
+}
+
+.col_14 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 117.02128%;
+}
+.col_14:last-child {
+  margin-right: 0;
+}
+
+.col_15 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 125.53191%;
+}
+.col_15:last-child {
+  margin-right: 0;
+}
+
+.col_16 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 134.04255%;
+}
+.col_16:last-child {
+  margin-right: 0;
+}
+
+.col_17 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 142.55319%;
+}
+.col_17:last-child {
+  margin-right: 0;
+}
+
+.col_18 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 151.06383%;
+}
+.col_18:last-child {
+  margin-right: 0;
+}
+
+.col_19 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 159.57447%;
+}
+.col_19:last-child {
+  margin-right: 0;
+}
+
+.col_20 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 168.08511%;
+}
+.col_20:last-child {
+  margin-right: 0;
+}
+
+.col_21 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 176.59574%;
+}
+.col_21:last-child {
+  margin-right: 0;
+}
+
+.col_22 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 185.10638%;
+}
+.col_22:last-child {
+  margin-right: 0;
+}
+
+.col_23 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 193.61702%;
+}
+.col_23:last-child {
+  margin-right: 0;
+}
+
+.col_24 {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 202.12766%;
+}
+.col_24:last-child {
+  margin-right: 0;
+}
+
+.omega {
   margin-right: 0;
 }
 

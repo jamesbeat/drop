@@ -1,0 +1,4 @@
+@for $i from 1 through 24 {
+	.col_{$i}{ @include span-columns($i);}
+}
+	
