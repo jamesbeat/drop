@@ -207,6 +207,16 @@ function drop_preprocess_node(&$vars) {
   if (!empty($node->classes_array)) {
     $vars['classes_array'] = array_merge($vars['classes_array'], $node->classes_array);
   }
+  
+  // Adjust Image tags fpr lazy loading
+  $body = $vars['content']['body'][0]['#markup'];
+  $themedir = drupal_get_path('theme', 'drop');
+  $regex = '#<img([^>]*) src="([^"/]*/?[^".]*\.[^"]*)"([^>]*)>((?!</a>))#';
+  $replace = '<div class="image-container"><img$1 src="'.$themedir .'/images/optimized/lazy.gif" data-src="$2" $3></div>';
+  $new_body = preg_replace($regex, $replace, $body);
+  // Assign to output
+  $vars['content']['body'][0]['#markup'] = $new_body;
+  
 }
 
 function drop_preprocess_block(&$vars, $hook) {
@@ -370,3 +380,4 @@ function drop_menu_local_tasks(&$variables) {
   }
   return $output;
 }
+
