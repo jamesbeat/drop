@@ -176,24 +176,31 @@ div.code {
   text-align: center;
 }
 
-.row{
-	    @include fill-parent();
-		@include row(table);
-		
- }
+.demo_row{
+	
+	    
+	@include display(flex); 
+	@include align-items(stretch);
+}
 
 .demo_feature{
 	@include span-columns(4);
     @include omega(3n);
+    
         
     padding: $gutter; 
     margin-bottom: 20px;
-        
+    
+    @include display(flex); 
+	@include align-items(stretch);
+          
     .border{
 	    border: 1px solid $demo-color;
 	    border-radius: 8px;
 		padding: 20px;
 		
+		width: 100%;
+				
     }
     
     @include media($tablet) {
