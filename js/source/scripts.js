@@ -137,7 +137,11 @@ Drupal.behaviors.basic = {
 				        //content.toggleAnimationClass('is-entering');
 				        $container.html($content);
 				       
-				       				        
+				        //start lazyloading				     
+				        if ( $.isFunction($.fn.unveil) ) {
+					        $("img").unveil();	
+					    }
+				       			        
 				        //console.log("Smoothstate End");
 				    }
 				},

@@ -57,6 +57,21 @@ function drop_form_system_theme_settings_alter(&$form, $form_state) {
     '#suffix' => '</div>', // #div-basic-breadcrumb-collapse
   );
 
+  
+  // Lazy loading
+  $form['options_settings']['drop_lazy'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Lazy loading'),
+    '#attributes' => array('id' => 'basic-lazy'),
+  );
+  $form['options_settings']['drop_lazy']['drop_lazy_enabled'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Enable Lazy loading of images'),
+    '#default_value' => theme_get_setting('drop_lazy_enabled'),
+    '#description' => t('If you check this box, all images will be loaded only if in the viewport.'),
+  );
+
+
   //IE specific settings.
   $form['options_settings']['drop_ie'] = array(
     '#type' => 'fieldset',

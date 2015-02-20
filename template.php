@@ -31,8 +31,6 @@ drupal_add_js(libraries_get_path('jquery.focuspoint').'/js/jquery.focuspoint.min
   'weight' => 10,
 ));
 
-
-
 drupal_add_js($js_base.'/snap.js', array(
   'type' => 'file',
   'scope' => 'footer',
@@ -75,6 +73,17 @@ drupal_add_js($js_base.'/highlight.pack.js', array(
   'group' => JS_THEME,
   'weight' => 55,
 ));
+
+//if(theme_get_setting('drop_lazy_enabled') == TRUE){
+drupal_add_js($js_base.'/jquery.unveil.js', array(
+  'type' => 'file',
+  'scope' => 'footer',
+  'group' => JS_THEME,
+  'weight' => 58,
+));	
+//}
+
+jquery.unveil.js
 	
 drupal_add_js($js_base.'/scripts.js', array(
   'type' => 'file',
@@ -207,15 +216,18 @@ function drop_preprocess_node(&$vars) {
   if (!empty($node->classes_array)) {
     $vars['classes_array'] = array_merge($vars['classes_array'], $node->classes_array);
   }
-  
-  // Adjust Image tags fpr lazy loading
-  $body = $vars['content']['body'][0]['#markup'];
-  $themedir = drupal_get_path('theme', 'drop');
-  $regex = '#<img([^>]*) src="([^"/]*/?[^".]*\.[^"]*)"([^>]*)>((?!</a>))#';
-  $replace = '<div class="image-container"><img$1 src="'.$themedir .'/images/optimized/lazy.gif" data-src="$2" $3></div>';
-  $new_body = preg_replace($regex, $replace, $body);
-  // Assign to output
-  $vars['content']['body'][0]['#markup'] = $new_body;
+    
+  if(theme_get_setting('drop_lazy_enabled') == TRUE){
+	  // Adjust Image tags f0r lazy loading
+	  $body = $vars['content']['body'][0]['#markup'];
+	  $themedir = drupal_get_path('theme', 'drop');
+	  $regex = '#<img([^>]*) src="([^"/]*/?[^".]*\.[^"]*)"([^>]*)>((?!</a>))#';
+	  $replace = '<div class="image-container"><img$1 src="'.$themedir .'/images/optimized/placeholder.gif" data-src="$2" class="lazy" $3/></div>';
+	  $new_body = preg_replace($regex, $replace, $body);
+	  // Assign to output
+	  $vars['content']['body'][0]['#markup'] = $new_body;
+	  
+  }
   
 }
 
