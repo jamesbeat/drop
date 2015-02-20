@@ -82,8 +82,6 @@ drupal_add_js($js_base.'/jquery.unveil.js', array(
   'weight' => 58,
 ));	
 //}
-
-jquery.unveil.js
 	
 drupal_add_js($js_base.'/scripts.js', array(
   'type' => 'file',
