@@ -179,7 +179,7 @@ div.code {
 .demo_row{
 	
 	    
-	@include display(flex); 
+	 @include display(flex); 
 	@include align-items(stretch);
 }
 
@@ -191,18 +191,10 @@ div.code {
     padding: $gutter; 
     margin-bottom: 20px;
     
-    @include display(flex); 
-	@include align-items(stretch);
-          
-    .border{
-	    border: 1px solid $demo-color;
-	    border-radius: 8px;
-		padding: 20px;
-		
-		width: 100%;
-				
-    }
-    
+    border: 1px solid $demo-color;
+	border-radius: 8px;
+         
+        
     @include media($tablet) {
 		
 	  @include span-columns(4);

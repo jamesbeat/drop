@@ -93,7 +93,7 @@ Drupal.behaviors.basic = {
 	    	    
 	    
 	    //smoothstate
-	  	    	    
+	  	 /*   	    
 	    var $body    = $('html, body'),
 	    	$main 	 = $('#main'),
 	    	$spinner = $('#center_spinner'),
@@ -146,15 +146,27 @@ Drupal.behaviors.basic = {
 				    }
 				},
 	        }).data('smoothState');
-
+*/
     });
 
     $(window).load(function() {
       // Execute code once the window is fully loaded.
-      console.log('loaded');
+      
       $('pre code').each(function(i, block) {
 	    hljs.highlightBlock(block);
 	  });
+      
+      if ( $.isFunction($.fn.unveil) ) {
+	       $("img").unveil(200, function() {
+		       
+		       console.log('lazy');
+		       
+			  $(this).load(function() {
+			    
+			    console.log('loaded');
+			  });
+			});
+	   }
       
     });
 

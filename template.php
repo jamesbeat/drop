@@ -220,7 +220,7 @@ function drop_preprocess_node(&$vars) {
 	  $body = $vars['content']['body'][0]['#markup'];
 	  $themedir = drupal_get_path('theme', 'drop');
 	  $regex = '#<img([^>]*) src="([^"/]*/?[^".]*\.[^"]*)"([^>]*)>((?!</a>))#';
-	  $replace = '<div class="image-container"><img$1 src="'.$themedir .'/images/optimized/placeholder.gif" data-src="$2" class="lazy" $3/></div>';
+	  $replace = '<div class="image-container"><img$1 src="'.$themedir .'/images/optimized/placeholder.gif" data-src="$2" class="lazy imgr" $3/></div>';
 	  $new_body = preg_replace($regex, $replace, $body);
 	  // Assign to output
 	  $vars['content']['body'][0]['#markup'] = $new_body;

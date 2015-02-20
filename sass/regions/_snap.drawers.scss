@@ -8,13 +8,13 @@
 	bottom: 0;
 	left: 0;
 	width: auto;
-	height: auto;
+	height: 100%;
 	z-index: 10;
-	overflow: auto;
+	overflow: visible;
 	
 	background: #fff;
 	
-	-webkit-overflow-scrolling: touch;
+	//-webkit-overflow-scrolling: touch;
 	-webkit-transform: translate3d(0, 0, 0);
 	-moz-transform: translate3d(0, 0, 0);
 	-ms-transform: translate3d(0, 0, 0);

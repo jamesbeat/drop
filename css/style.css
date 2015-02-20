@@ -4131,11 +4131,10 @@ picture {
   bottom: 0;
   left: 0;
   width: auto;
-  height: auto;
+  height: 100%;
   z-index: 10;
-  overflow: auto;
+  overflow: visible;
   background: #fff;
-  -webkit-overflow-scrolling: touch;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
@@ -4566,22 +4565,8 @@ div.code:after {
   width: 31.91489%;
   padding: 20px;
   margin-bottom: 20px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: stretch;
-  -moz-box-align: stretch;
-  box-align: stretch;
-  -webkit-align-items: stretch;
-  -moz-align-items: stretch;
-  -ms-align-items: stretch;
-  -o-align-items: stretch;
-  align-items: stretch;
-  -ms-flex-align: stretch;
+  border: 1px solid #00fff0;
+  border-radius: 8px;
   text-align: center;
 }
 .demo_feature:last-child {
@@ -4592,12 +4577,6 @@ div.code:after {
 }
 .demo_feature:nth-child(3n+1) {
   clear: left;
-}
-.demo_feature .border {
-  border: 1px solid #00fff0;
-  border-radius: 8px;
-  padding: 20px;
-  width: 100%;
 }
 @media screen and (max-width: 768px) {
   .demo_feature {
@@ -5161,7 +5140,6 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 #page {
