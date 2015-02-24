@@ -74,14 +74,16 @@ drupal_add_js($js_base.'/highlight.pack.js', array(
   'weight' => 55,
 ));
 
-//if(theme_get_setting('drop_lazy_enabled') == TRUE){
-drupal_add_js($js_base.'/jquery.unveil.js', array(
-  'type' => 'file',
-  'scope' => 'footer',
-  'group' => JS_THEME,
-  'weight' => 58,
-));	
-//}
+if(theme_get_setting('drop_lazy_enabled') == TRUE){
+	
+	drupal_add_js($js_base.'/jquery.lazyload.js', array(
+	  'type' => 'file',
+	  'scope' => 'footer',
+	  'group' => JS_THEME,
+	  'weight' => 58,
+	));
+
+}
 	
 drupal_add_js($js_base.'/scripts.js', array(
   'type' => 'file',
@@ -220,13 +222,16 @@ function drop_preprocess_node(&$vars) {
 	  $body = $vars['content']['body'][0]['#markup'];
 	  $themedir = drupal_get_path('theme', 'drop');
 	  $regex = '#<img([^>]*) src="([^"/]*/?[^".]*\.[^"]*)"([^>]*)>((?!</a>))#';
-	  $replace = '<div class="image-container"><img$1 src="'.$themedir .'/images/optimized/placeholder.gif" data-src="$2" class="lazy imgr" $3/></div>';
+	  $replace = '<div class="image-container"><img$1 src="'.$themedir.'/images/optimized/placeholder.gif" data-original="$2" class="lazy" $3/></div>';
 	  $new_body = preg_replace($regex, $replace, $body);
 	  // Assign to output
 	  $vars['content']['body'][0]['#markup'] = $new_body;
 	  
+	 //<img class="lazy" data-original="img/example.jpg" width="765" height="574">
+	 //<noscript><img src="img/example.jpg" width="640" heigh="480"></noscript>
+	 // image_style_url('retina', $path)
   }
-  
+    
 }
 
 function drop_preprocess_block(&$vars, $hook) {

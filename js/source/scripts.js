@@ -20,6 +20,8 @@ Drupal.behaviors.basic = {
     $(window).ready(function() {
       // Execute code once the window is ready.
       //console.log("RDY");
+		
+		
 					
 		var snapper = new Snap({
 	        element: document.getElementById('snap_table'),
@@ -156,18 +158,17 @@ Drupal.behaviors.basic = {
 	    hljs.highlightBlock(block);
 	  });
       
-      if ( $.isFunction($.fn.unveil) ) {
-	       $("img").unveil(200, function() {
-		       
-		       console.log('lazy');
-		       
-			  $(this).load(function() {
-			    
-			    console.log('loaded');
-			  });
+      if ( $.isFunction($.fn.lazyload) ) {
+	       
+	       console.log('LL init');
+	       
+		  	$("img.lazy").lazyload({         
+			    effect : "fadeIn",
+			    container: $("#snap_table")
 			});
 	   }
-      
+	   
+	        
     });
 
     $(window).resize(function() {
