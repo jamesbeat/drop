@@ -1,0 +1,61 @@
+{
+	"sass": {
+		  "src":  "../sass/**/*.{sass,scss}",
+		  "dest": "../css",
+		  "options": {
+		    "noCache": true,
+		    "compass": false,
+		    "bundleExec": true,
+		    "sourcemap": true,
+		    "sourcemapPath": "../../_assets/scss"
+		  }
+	},
+	
+	"images": {
+		"src":  "../images/source/**/*.{png,jpg,jpeg,gif,svg}",
+		"dest": "../images/optimized",
+		"pngopt": {"optimizationLevel": "3"},
+		"pngquant": { "quality": "65-80", "speed": "4"},
+		"jpeg": { "max": "70"}
+			
+	},
+	
+	"favicon" : {
+	    "files": {
+	        "src": "../logo.png",        
+	        "dest": "../",               
+	        "html": "../favicon.html",           
+	        "iconsPath": null,           
+	        "androidManifest": null,     
+	        "browserConfig": null,       
+	        "firefoxManifest": null,     
+	        "yandexManifest": null       
+	    },
+	    "icons": {
+	        "android": true,           
+	        "appleIcon": true,         
+	        "appleStartup": true,      
+	        "coast": true,             
+	        "favicons": true,          
+	        "firefox": true,           
+	        "opengraph": true,         
+	        "windows": true,           
+	        "yandex": true             
+	    },
+	    "settings": {
+	        "appName": null,             
+	        "appDescription": null,      
+	        "developer": null,           
+	        "developerURL": null,        
+	        "version": 1.0,             
+	        "background": null,          
+	        "index": null,               
+	        "url": null,                 
+	        "silhouette": false,       
+	        "logging": true           
+	    },
+	    "favicon_generation": null     
+	}
+
+				
+}

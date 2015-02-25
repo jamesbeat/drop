@@ -87,15 +87,37 @@ module.exports = function(grunt) {
                 }
             }
         },
-       /* favicons: {
-		    options: {
-		      // Task-specific options go here. 
-		    },
-		    icons: {
-		      src: '../logo.png',
-		      dest: '../'
-		    },
-		},*/
+        real_favicon: {
+		    my_icon: {
+		      // The favicon master picture 
+		      src: 'images/source/icons/icon.png',
+		      // Directory where the generated pictures will be stored 
+		      dest: 'images/optimized/icons',
+		      // Path to icon (eg. favicon.ico will be accessible through http://mysite.com/path/to/icons/favicon.ico) 
+		      icons_path: 'images/optimized/icons',
+		      // HTML files where the favicon code should be inserted 
+		      html: ['images/optimized/icons/index.html'],
+		      design: {
+		        // These options reflect the settings available in RealFaviconGenerator 
+		        ios: {
+		          picture_aspect: 'background_and_margin',
+		          background_color: '#ffffff',
+		          margin: 4
+		        },
+		        windows: {
+		          picture_aspect: 'white_silhouette',
+		          background_color: '#285078'
+		        }
+		      },
+		      settings: {
+		        // 0 = no compression, 5 = maximum compression 
+		        compression: 5,
+		        // Default is Mitchell 
+		        scaling_algorithm: 'NearestNeighbor'
+		      }
+		    }
+		  }
+      
     });
     // This is where we tell Grunt we plan to use this plug-in.
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -103,6 +125,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
+    grunt.loadNpmTasks('grunt-real-favicon');
     //grunt.loadNpmTasks('grunt-favicons');
     // Now that we've loaded the package.json and the node_modules we set the base path
     // for the actual execution of the tasks
@@ -110,5 +133,6 @@ module.exports = function(grunt) {
     // This is where we tell Grunt what to do when we type "grunt" into the terminal.
     // Note. if you'd like to run and of the tasks individually you can do so by typing 'grunt mytaskname' alternatively
     // you can type 'grunt watch' to automatically track your files for changes.
-    grunt.registerTask('default', ['browserSync','watch']);
+    grunt.registerTask('default', ['browserSync','real_favicon','watch']);
+    
 };

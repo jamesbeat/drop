@@ -4,16 +4,15 @@ section.demo {
   margin-bottom: 3em;
 
   background-color: rgba(0,255,240,0.2);
-  border-radius: 4px;
-
+  border-radius: 4px;  
  
   div.box{
-	  
+	   
 	  background-color: rgba(0,255,240,0.2);
 	  border-radius: 4px;
 	  margin-bottom: 5px;
   }
-
+ 
   & > code, code.block {
     display: block;
   }
