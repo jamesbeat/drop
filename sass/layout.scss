@@ -16,6 +16,11 @@
   margin-left: auto;
   margin-right: auto;
   width: $max-width;
+  
+  padding-left: $page-padding;
+  padding-right: $page-padding;
+  border: 1px dotted $demo_color;
+  
   // Collapse to fluid width once the browser width goes below current max width.
   @if $responsive {
     @include media($max-width-fluid) {
@@ -23,6 +28,11 @@
     }
   }
 }
+
+.row{
+	@include row(table);
+}
+
 
 #content {
 

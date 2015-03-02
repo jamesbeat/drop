@@ -176,9 +176,8 @@ div.code {
 }
 
 .demo_row{
-	
-	    
-	 @include display(flex); 
+		    
+	@include display(flex); 
 	@include align-items(stretch);
 }
 
@@ -228,7 +227,7 @@ div.code {
 
 
 .demo_images{
-	img{ margin-bottom: $gutter;}
+	img{ margin-bottom: $gutter; height: auto;}
 }
 
 section#text{ @include outer-container; }

@@ -289,6 +289,9 @@ picture {
   margin-left: auto;
   margin-right: auto;
   width: 68em;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px dotted #00fff0;
 }
 .container:after {
   content: "";
@@ -299,6 +302,12 @@ picture {
   .container {
     width: auto;
   }
+}
+
+.row {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
 }
 
 #footer {

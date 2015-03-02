@@ -3893,16 +3893,6 @@ picture {
 
 /* pages.front.scss */
 /* nodes.default.scss */
-#main {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex: 1;
-  -moz-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
 #content {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -4628,6 +4618,7 @@ div.code:after {
 
 .demo_images img {
   margin-bottom: 20px;
+  height: auto;
 }
 
 section#text {

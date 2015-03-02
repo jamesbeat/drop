@@ -61,6 +61,7 @@ module.exports = function(grunt) {
                     style: 'expanded', // This controls the compiled css and can be changed to nested, compact or compressed
                     sourcemap: 'true',
                     require: 'sass-globbing',
+                    
                 },
                 files: [{
                     expand: true,
@@ -71,6 +72,7 @@ module.exports = function(grunt) {
                 }]
             }
         },
+        
         browserSync: {
             dev: {
                 bsFiles: {
